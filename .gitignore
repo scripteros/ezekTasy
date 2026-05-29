@@ -1,0 +1,10 @@
+node_modules/
+
+# A pasta dist contem a versao ofuscada para distribuicao.
+# Os arquivos abaixo ficam como area de trabalho local.
+/assets/
+/manifest.json
+/popup/
+/src/
+
+!/dist/

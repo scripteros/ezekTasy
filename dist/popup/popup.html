@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <title>Ezek Tasy</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup">
+      <header class="hero">
+        <img src="../assets/ezek-icon-128.png" alt="Logo Ezek Tasy" class="brand-logo">
+        <div>
+          <p class="eyebrow">Extensão Tasy HTML</p>
+          <h1>Ezek Tasy</h1>
+          <p>Personalização visual e metadados técnicos.</p>
+        </div>
+      </header>
+
+      <section class="panel">
+        <label class="switch-row master-switch">
+          <span>
+            <strong>Extensão ativa</strong>
+            <small>Liga ou desliga todos os recursos do Ezek Tasy.</small>
+          </span>
+          <input id="extensionEnabled" type="checkbox">
+        </label>
+      </section>
+
+      <section class="panel">
+        <label class="switch-row">
+          <span>
+            <strong>Metadados nos campos</strong>
+            <small>Mostra tabela, atributo e detalhes capturados.</small>
+          </span>
+          <input id="enabled" type="checkbox">
+        </label>
+      </section>
+
+      <section class="panel">
+        <label class="field">
+          <span>Tema da aplicação</span>
+          <select id="theme">
+            <option value="default">Padrão do Tasy</option>
+            <option value="ocean">Azul oceano</option>
+            <option value="emerald">Verde clínico</option>
+            <option value="rose">Rosa suave</option>
+            <option value="lilac">Lavanda</option>
+            <option value="pearl">Pérola</option>
+            <option value="wine">Vinho</option>
+            <option value="graphite">Grafite</option>
+            <option value="amber">Âmbar</option>
+          </select>
+        </label>
+        <div class="swatches" aria-hidden="true">
+          <span class="swatch ocean"></span>
+          <span class="swatch emerald"></span>
+          <span class="swatch rose"></span>
+          <span class="swatch lilac"></span>
+          <span class="swatch pearl"></span>
+          <span class="swatch wine"></span>
+          <span class="swatch graphite"></span>
+          <span class="swatch amber"></span>
+        </div>
+      </section>
+
+      <section class="panel grid">
+        <label class="field">
+          <span>Fonte</span>
+          <select id="fontFamily">
+            <option value="default">Padrão</option>
+            <option value="Arial">Arial</option>
+            <option value="Segoe UI">Segoe UI</option>
+            <option value="Tahoma">Tahoma</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Trebuchet MS">Trebuchet MS</option>
+            <option value="Georgia">Georgia</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Tamanho</span>
+          <select id="textSizeMode">
+            <option value="default">Padrão</option>
+            <option value="custom">Personalizado</option>
+          </select>
+          <input id="textSize" type="range" min="10" max="18" step="1">
+          <small><span id="textSizeValue">12</span>px</small>
+        </label>
+
+        <label class="field">
+          <span>Cor dos textos</span>
+          <select id="textColorMode">
+            <option value="default">Padrão</option>
+            <option value="custom">Personalizada</option>
+          </select>
+          <input id="textColor" type="color">
+        </label>
+
+        <label class="field">
+          <span>Cor dos campos</span>
+          <select id="fieldColorMode">
+            <option value="default">Padrão</option>
+            <option value="custom">Personalizada</option>
+          </select>
+          <input id="fieldColor" type="color">
+        </label>
+
+        <label class="field">
+          <span>Cor dos botões</span>
+          <select id="buttonColorMode">
+            <option value="default">Padrão</option>
+            <option value="custom">Personalizada</option>
+          </select>
+          <input id="buttonColor" type="color">
+        </label>
+      </section>
+
+      <section class="panel grid">
+        <label class="field">
+          <span>Estilo dos campos</span>
+          <select id="fieldStyle">
+            <option value="default">Padrão</option>
+            <option value="square">Reto</option>
+            <option value="soft">Levemente arredondado</option>
+            <option value="pill">Arredondado</option>
+            <option value="underline">Linha inferior</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Estilo dos botões</span>
+          <select id="buttonStyle">
+            <option value="default">Padrão</option>
+            <option value="soft">Suave</option>
+            <option value="solid">Preenchido</option>
+            <option value="outline">Contorno</option>
+            <option value="pill">Arredondado</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="panel donation">
+        <div>
+          <strong>Doação</strong>
+          <small>Apoie a evolução do Ezek Tasy para Ezequiel O. S. S.</small>
+        </div>
+        <figure class="donation-qr">
+          <img id="donationQr" src="../assets/doacao-qrcode.png" alt="QR Code de doação para Ezequiel O. S. S.">
+          <figcaption>Escaneie o QR Code pelo aplicativo do banco.</figcaption>
+        </figure>
+        <p id="donationStatus" class="donation-status" aria-live="polite"></p>
+      </section>
+
+      <section class="about">
+        <dl>
+          <div>
+            <dt>Desenvolvedor da API</dt>
+            <dd>Analista de Sistema Ezequiel Oliveira</dd>
+          </div>
+          <div>
+            <dt>Versão</dt>
+            <dd id="version">0.1.0</dd>
+          </div>
+          <div>
+            <dt>Direitos</dt>
+            <dd>Todos os direitos reservados.</dd>
+          </div>
+          <div>
+            <dt>Projeto</dt>
+            <dd><a href="https://github.com/scripteros/ezekTasy" target="_blank" rel="noreferrer">github.com/scripteros/ezekTasy</a></dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
