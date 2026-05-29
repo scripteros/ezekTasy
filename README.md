@@ -47,33 +47,10 @@ Quando disponivel, ela mostra:
 
 Ao clicar no metadado exibido acima do campo, a extensao abre um modal com os detalhes tecnicos coletados.
 
-## Gerar Versao Ofuscada
-
-A versao de distribuicao fica em `dist` e e gerada com JavaScript ofuscado.
-
-```powershell
-npm install
-npm run check
-npm run build
-```
-
-Depois do build, instale a extensao usando a pasta `dist`.
-
-## Publicacao No GitHub
-
-Este projeto foi preparado para publicar no GitHub a versao ofuscada em `dist`, sem expor os arquivos fonte locais de trabalho.
-
-Repositorio:
-
-```text
-https://github.com/scripteros/ezekTasy
-```
-
 ## Observacoes
 
 - Esta versao esta configurada para `https://tasy.sepaco.org.br/*`.
 - Nao coloque senhas, tokens ou chaves privadas dentro da extensao.
-- Ofuscacao dificulta copia e alteracao, mas nao torna uma extensao Chrome impossivel de inspecionar.
 
 ## Creditos
 
